@@ -25,6 +25,29 @@ body {
   border: 1px solid #DC0026;
 }
 
+#newsFeet > section > section {
+  padding: 0;
+}
+
+#newsFeet > section > section > nav {
+  align-items: center;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+}
+
+#newsFeet > section > section > nav > a {
+  color: #FFF2E4;
+  font-size: 1.4em;
+}
+
+#newsFeet > section > section > nav > button {
+  border: 1px solid #FFF2E4;
+}
+
+#newsFeet > section > section > nav > img {
+  width: 4%;
+}
+
 .log-in-buttons {
   color: white;
   margin-top: 40%;
