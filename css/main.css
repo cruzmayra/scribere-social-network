@@ -1,5 +1,7 @@
 body {
   font-family: 'Titillium Web', sans-serif;
+  margin:0;
+  padding:0;
 }
 
 #log-in {
@@ -19,3 +21,5 @@ body {
   margin-top: 40%;
   text-align: center;
 }
+
+  /*Vista inicio*/
