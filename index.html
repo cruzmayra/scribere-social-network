@@ -12,24 +12,30 @@
       <section class="row">
         <section class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <div class="log-in-tittle">
-            <p class="h1">Scribere</p>
-            <p class="h4">Write free, be free!</p>
+            <img  class="log-in-logo rounded mx-auto d-block" src="assets/images/logo-scribere.png" alt="logo">
           </div>
         </section>
         <section class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <div class="log-in-buttons">
-            <button type="button" class="btn btn-info btn-block">Login with Facebook</button>
-            <button type="button" class="btn btn-info btn-block">Login with Twitter</button>
-            <button type="button" class="btn btn-info btn-block">Login with Google</button>
-            <button type="button" class="btn btn-info btn-block">Sign In</button>
+            <button type="button" class="btn btn-info btn-block" id="login-google">Login with Google</button>
+            <button type="button" class="btn btn-info btn-block" id="login-facebook">Login with Facebook</button>
+            <button type="button" class="btn btn-info btn-block" id="login-twitter">Login with Twitter</button>
+            <button type="button" class="btn btn-info btn-block" id="sign-in">Sign In</button>
           </div>
         </section>
       </section>
     </section>
 
   <!-- sección con scripts -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-messaging.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 </html>
