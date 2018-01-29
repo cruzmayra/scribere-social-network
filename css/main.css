@@ -1,0 +1,21 @@
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+#log-in {
+  /* align-items: center; */
+  background-image: url('../assets/images/log-in.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  /* display: flex; */
+  /* justify-content: center; */
+  height: 100vh;
+}
+
+.log-in-tittle,
+.log-in-buttons {
+  color: white;
+  margin-top: 40%;
+  text-align: center;
+}
