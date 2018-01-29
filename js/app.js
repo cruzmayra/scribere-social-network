@@ -20,7 +20,7 @@ var config = {
       var token = result.credential.accessToken;
       var user = result.user;
       console.log(result);
-      window.location = 'segunda-vista.html';
+      window.location = '../views/tarjetas.html';
     }).catch(function(error) {
       var errorCode = error.code;
       console.log(errorCode);

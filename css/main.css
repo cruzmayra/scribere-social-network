@@ -1,4 +1,6 @@
 body {
+  /* background-color: rgba(255,242,228,0.5); */
+  color: #616163;
   font-family: 'Titillium Web', sans-serif;
   margin:0;
   padding:0;
@@ -48,6 +50,40 @@ body {
   width: 4%;
 }
 
+#quote-newsfeed {
+  margin: 3% 0%;
+  text-align: center;
+}
+
+#new-history > div:nth-child(1) > label {
+  color: #DC0026;
+}
+
+#new-history > div:nth-child(2) > button {
+  background-color: #00AFAC;
+  border: 1px solid #00AFAC;
+  color: #FFF2E4;
+  margin-left: 85%;
+}
+
+#new-history > div:nth-child(2) > input {
+  color: #00AFAC;
+  font-size: 0.8em;
+}
+
+#new-history > div:nth-child(1) > textarea {
+  border: 1px solid #44FFD2;
+}
+
+#headingOne > h5 > button,
+#headingTwo > h5 > button,
+#headingThree > h5 > button,
+#headingFour > h5 > button,
+#headingFive > h5 > button {
+  color: #FFF2E4;
+  /* color: #DC0026; */
+}
+
 .log-in-buttons {
   color: white;
   margin-top: 40%;
@@ -63,4 +99,9 @@ body {
 .log-in-logo {
  border-radius: 50%;
  width: 60%;
+}
+
+/* favoritos */
+.card-header {
+  background-color: #00AFAC;
 }
