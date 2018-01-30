@@ -12,6 +12,12 @@ body {
   background-repeat: no-repeat;
   background-size:cover;
   height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#log-in > section {
+  width: 100%;
 }
 
 #log-in > section > section:nth-child(2) > div > button {
@@ -33,22 +39,31 @@ body {
 
 #newsFeet > section > section > nav {
   align-items: center;
+  height: 100px;
   justify-content: space-between;
   -webkit-flex-direction: row;
+  padding: 0 10%;
 }
 
-#newsFeet > section > section > nav > a {
+#newsFeet > section > section > nav > a,
+#newsFeet > section > section > nav > span > a {
   color: #FFF2E4;
-  font-size: 1.4em;
+  font-size: 1em;
 }
 
 #newsFeet > section > section > nav > button {
   border: 1px solid #FFF2E4;
+  margin: auto 0%;
 }
 
+/* estilos para las imagenes de la sección de newsfeed */
 #newsFeet > section > section > nav > img {
-  width: 4%;
+  width: 8%;
+}
 
+#newsFeet > section > section > nav > span > img {
+  border-radius: 50%;
+  width: 8%;
 }
 
 #quote-newsfeed {
@@ -64,7 +79,7 @@ body {
   background-color: #dc0026;
   border: 1px solid #dc0026;
   color: #FFF2E4;
-  margin-left: 85%;
+  margin-left: 75%;
 }
 
 #new-history > div:nth-child(2) > input {
@@ -85,15 +100,9 @@ body {
   /* color: #DC0026; */
 }
 
-.log-in-buttons {
-  color: white;
-  margin-top: 40%;
-  text-align: center;
-}
-
 .log-in-tittle,
 .log-in-buttons {
-  margin-top: 30%;
+  margin-top: 15%;
   text-align: center;
 }
 
@@ -113,7 +122,13 @@ body {
     border-color: #dc0026;
 }
 
-#profileNav > section > section {
+
+.card {
+  border: 1px solid #44FFD2;
+}
+
+#profile > section > section {
+
   padding: 0;
 }
 
@@ -134,7 +149,6 @@ body {
 
 #profileNav > section > section > nav > img {
   width: 4%;
-
 }
 
 #quote-newsfeed {

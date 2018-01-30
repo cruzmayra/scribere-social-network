@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Scribere: Write free, be free.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
   </head>
-  <body>
+  <body class="timeline">
     <section class="container-fluid" id="newsFeet">
 <!-- inicio de la barra de navegación -->
       <section class="row">
@@ -15,7 +16,7 @@
           <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00afac;">
             <img src="../assets/images/pluma4.png" class="rounded-circle img-fluid" alt="">
             <a class="navbar-brand" href="#">Home</a>
-            <a class="navbar-brand" href="#">Profile</a>
+            <span><img class="user-photo" src="" alt=""> <a class="navbar-brand user-name" href="#">Profile</a></span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -131,16 +132,20 @@
              </div>
            </form>
 <!-- termina sección para ingresar nueva histria -->
+
+<!-- sección de newsfeed -->
            <div id="timeline-history">
              <div class="card">
                <img class="card-img-top" src="http://dummyimage.com/400x300" alt="Card image">
                <div class="card-body">
-               <h5 class="card-title">Card title</h5>
+               <h5 class="card-title">User name</h5>
                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                <a href="#" class="btn btn-primary">Save as favorite</a>
                </div>
             </div>
            </div>
+<!-- fin de sección de newsfeed -->
+
         </section>
       </section>
     </section>
@@ -148,8 +153,15 @@
 
 
   <!-- sección con scripts -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-messaging.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
   </body>
 </html>
