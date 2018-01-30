@@ -37,7 +37,8 @@ body {
   -webkit-flex-direction: row;
 }
 
-#newsFeet > section > section > nav > a {
+#newsFeet > section > section > nav > a,
+#newsFeet > section > section > nav > span > a {
   color: #FFF2E4;
   font-size: 1.4em;
 }
@@ -46,9 +47,14 @@ body {
   border: 1px solid #FFF2E4;
 }
 
+/* estilos para las imagenes de la sección de newsfeed */
 #newsFeet > section > section > nav > img {
   width: 4%;
+}
 
+#newsFeet > section > section > nav > span > img {
+  border-radius: 50%;
+  width: 8%;
 }
 
 #quote-newsfeed {
@@ -113,8 +119,9 @@ body {
     border-color: #dc0026;
 }
 
-
-
+.card {
+  border: 1px solid #44FFD2;
+}
 
 #profile > section > section {
   padding: 0;
@@ -137,5 +144,4 @@ body {
 
 #profile > section > section > nav > #miniLogo {
   width: 4%;
-
 }

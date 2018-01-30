@@ -6,29 +6,43 @@ var config = {
     storageBucket: "",
     messagingSenderId: "336969414618"
   };
-  firebase.initializeApp(config);
 
+firebase.initializeApp(config);
+
+function loadLoginPage(){
   $('#login-google').click(authenticationGoogle);
+}
 
-  function authenticationGoogle(){
-    var provider = new firebase.auth.GoogleAuthProvider();
-    authentication(provider);
-  }
+function authenticationGoogle(){
+  var provider = new firebase.auth.GoogleAuthProvider();
+  authentication(provider);
+}
 
-  function authentication(provider){
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-      var token = result.credential.accessToken;
-      var user = result.user;
-      console.log(result);
-      window.location = '../views/tarjetas.html';
-    }).catch(function(error) {
-      var errorCode = error.code;
-      console.log(errorCode);
-      var errorMessage = error.message;
-      console.log(errorMessage);
-      var email = error.email;
-      console.log(email);
-      var credential = error.credential;
-      console.log(credential);
-    });
-  }
+function authentication(provider){
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+    var token = result.credential.accessToken;
+    var user = result.user;
+    console.log(result);
+    localStorage.setItem('userName',user.displayName);
+    localStorage.setItem('userPhoto', user.photoURL);
+    window.location.href = 'views/tarjetas.html';
+
+  }).catch(function(error) {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    var email = error.email;
+    var credential = error.credential;
+  });
+}
+
+function paintDataUser() {
+  var userName = localStorage.getItem('userName');
+  var userPhoto = localStorage.getItem('userPhoto')
+  $('.timeline .user-name').text(userName);
+  $('.timeline .user-photo').attr('src',userPhoto);
+}
+
+$(document).ready(function () {
+  loadLoginPage();
+  paintDataUser();
+});
