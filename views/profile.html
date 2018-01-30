@@ -5,87 +5,87 @@
     <title>Scribere: Write free, be free.</title>
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
   </head>
   <body>
-    <section class="container-fluid" id="profile">
+    <section class="container-fluid" id="profileNav">
 <!-- inicio de la barra de navegación -->
       <section class="row">
         <section class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
           <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00afac;">
-            <img src="../assets/images/pluma4.png" class="rounded-circle img-fluid" id="miniLogo" alt="">
-            <a class="navbar-brand" href="#">Home</a>
-            <a class="navbar-brand" href="#">Profile</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a class="nav-link" href="#">Log out</a></li>
-              </ul>
-            </div>
-          </nav>
+            <!--<img src="../assets/images/pluma4.png" class="rounded-circle img-fluid" alt="">-->
+              <a class="navbar-brand d-inline" href="#">Home</a>
+              <a class="navbar-brand d-inline" href="#">Profile</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active"><a class="nav-link" href="#">Log out</a></li>
+                </ul>
+              </div>
+            </nav>
         </section>
       </section>
     </section>
 <!-- fin de la barra de navegación -->
 
-    <section class="container" >
+<section class= "container">
+  <section class="row picture">
+    <section class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+      <img id="profilePicture"src="http://dummyimage.com/200x200" class="rounded-circle mx-auto d-block" alt="picture profile">
+
+    </section>
+  </section>
+</section>
+
+    <section class="container-fluid userImage" >
       <section class="row">
-        <section class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
-          <table>
-            <tr>
-              <th><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></th>
-              <th><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></th>
-              <th><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></th>
-            </tr>
+        <section class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
 
-            <tr>
-              <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
-              <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
-              <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
-            </tr>
+              <thead><p class="h2">My Firends</p></thead>
 
-            <tr>
-              <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
-              <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
-              <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
-            </tr>
-          </table>
-        </section>
-        </section>
-      </section>
+            <table class="table table-responsive">
+                <tr>
+                  <th scope="col"><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></th>
+                  <th scope="col"><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></th>
+                  <th scope="col"><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></th>
+                </tr>
 
+              <tbody>
+                <tr scope="row">
+                  <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
+                  <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
+                  <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
+                </tr>
 
-      <section class="container" >
-        <section class="row" id="myPost">
-          <section class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
-              <div class="card">
-                <img class="card-img-top" src="http://dummyimage.com/200x200" alt="Card image">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content, Some quick example text to build on the card title and make up the bulk of the card's content, Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Share</a>
-                </div>
-             </div>
+                <tr scope="row">
+                  <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
+                  <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
+                  <td><img class="friendProfile" src="http://dummyimage.com/102x102" alt="friend picture"></td>
+                </tr>
+
+              </tbody>
+            </table>
           </section>
         </section>
-      </section>
 
-      <section class="container" id="myPost">
-        <section class="row">
-          <section class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
-              <div class="card">
-                <img class="card-img-top" src="http://dummyimage.com/200x200" alt="Card image">
-                <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content, Some quick example text to build on the card title and make up the bulk of the card's content, Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Share</a>
-                </div>
-             </div>
-          </section>
+        <section class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+
+           <div id="timeline-history">
+             <div class="card">
+               <img class="card-img-top" src="http://dummyimage.com/400x300" alt="Card image">
+               <div class="card-body">
+               <h5 class="card-title">Card title</h5>
+               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <a href="#" class="btn btn-primary">Save as favorite</a>
+               </div>
+            </div>
+           </div>
         </section>
-      </section>
+    </section>
+
 
 
   <!-- sección con scripts -->

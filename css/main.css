@@ -23,7 +23,7 @@ body {
 #log-in > section > section:nth-child(2) > div > button {
   background-color: #00AFAC;
   border: 1px solid #00AFAC;
-  height: 80px;
+  height: 5rem;
   margin: 3% auto;
   width: 80%;
 }
@@ -122,29 +122,81 @@ body {
     border-color: #dc0026;
 }
 
+
 .card {
   border: 1px solid #44FFD2;
 }
 
 #profile > section > section {
+
   padding: 0;
 }
 
-#profile > section > section > nav {
+#profileNav > section > section > nav {
   align-items: center;
   justify-content: space-between;
   -webkit-flex-direction: row;
 }
 
-#profile > section > section > nav > a {
+#profileNav > section > section > nav > a {
   color: #FFF2E4;
   font-size: 1.4em;
 }
 
-#profile > section > section > nav > button {
+#profileNav > section > section > nav > button {
   border: 1px solid #FFF2E4;
 }
 
-#profile > section > section > nav > #miniLogo {
+#profileNav > section > section > nav > img {
   width: 4%;
+}
+
+#quote-newsfeed {
+  margin: 3% 0%;
+  text-align: center;
+}
+
+#new-history > div:nth-child(1) > label {
+  color: #DC0026;
+}
+
+#new-history > div:nth-child(2) > button {
+  background-color: #dc0026;
+  border: 1px solid #dc0026;
+  color: #FFF2E4;
+  margin-left: 85%;
+}
+
+#new-history > div:nth-child(2) > input {
+  color: #00AFAC;
+  font-size: 0.8em;
+}
+
+#new-history > div:nth-child(1) > textarea {
+  border: 1px solid #44FFD2;
+}
+
+#headingOne > h5 > button,
+#headingTwo > h5 > button,
+#headingThree > h5 > button,
+#headingFour > h5 > button,
+#headingFive > h5 > button {
+  color: #FFF2E4;
+  /* color: #DC0026; */
+}
+
+.table-responsive{
+  padding: 0;
+  margin:0;
+  position: relative;
+  display: inline-block;
+  align-items: flex-start;
+}
+
+#myPost{
+  padding: 0;
+  margin:0;
+  position: relative;
+  display: inline-block;
+  justify-content: flex-end;
 }
