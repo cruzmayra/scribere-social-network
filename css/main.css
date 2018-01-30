@@ -48,6 +48,7 @@ body {
 
 #newsFeet > section > section > nav > img {
   width: 4%;
+
 }
 
 #quote-newsfeed {
@@ -60,8 +61,8 @@ body {
 }
 
 #new-history > div:nth-child(2) > button {
-  background-color: #00AFAC;
-  border: 1px solid #00AFAC;
+  background-color: #dc0026;
+  border: 1px solid #dc0026;
   color: #FFF2E4;
   margin-left: 85%;
 }
@@ -104,4 +105,37 @@ body {
 /* favoritos */
 .card-header {
   background-color: #00AFAC;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #dc0026;
+    border-color: #dc0026;
+}
+
+
+
+
+#profile > section > section {
+  padding: 0;
+}
+
+#profile > section > section > nav {
+  align-items: center;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+}
+
+#profile > section > section > nav > a {
+  color: #FFF2E4;
+  font-size: 1.4em;
+}
+
+#profile > section > section > nav > button {
+  border: 1px solid #FFF2E4;
+}
+
+#profile > section > section > nav > #miniLogo {
+  width: 4%;
+
 }
