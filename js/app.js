@@ -62,19 +62,11 @@ function validateHistory(){
 
 function paintHistoryInHtml(e) {
   e.preventDefault();
-  //
-  //   if($imagenUpload.files && $imagenUpload.files[0]) {
-  //     console.log($imagenUpload);
-  //
-  //     var variableX = new FileReader();
-  //
-  //     console.log(variableX);
-  //   }
 
   var $historyInput = $('.new-text').val();
 
-  var $cardHistory = $('<div />', {'class' : 'card'});
-  var $cardImagen = $('<img />', {'class' : 'card-img-top photo-history', 'alt' : 'Card image'});
+  var $cardHistory = $('<div />', {'class' : 'card new-post'});
+  var $cardImagen = $('<img />', {'class' : 'card-img-top img-fluid photo-history', 'alt' : 'Card image'});
   var $cardBody = $('<div />', {'class' : 'card-body'});
   var $cardTittle = $('<h5 />', {'class' : 'card-title'});
   var $cardText = $('<p />', {'class' : 'card-text'});
@@ -105,24 +97,11 @@ function paintHistoryInHtml(e) {
     $cardImagen.attr('src'," ");
   }
 
-  $('#timeline-history').append($cardHistory);
-
+  $('#timeline-history').prepend($cardHistory);
+  $('#wall-history"').prepend($cardHistory);
   $('.new-text').val(" ");
   $('.file-history').next().val(" ");
 }
-
-//
-// $(document).on('change','.file-history',function(){
-//   // e.preventDefault();
-//   if(this.files && this.files[0]){
-//     /* Creamos la Imagen*/
-// 		var imagenHistory = $('.photo-history');
-//     /* Asignamos el atributo source , haciendo uso del método createObjectURL*/
-// 		imagenHistory.attr('src', URL.createObjectURL(this.files[0]));
-//     /  * Añadimos al Div*/
-// 	  console.log(imagenHistory);
-// 	}
-// });
 
 function logOut(e) {
   firebase.auth().signOut().then(function() {

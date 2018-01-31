@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scribere: Write free, be free.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:200,300,400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body class="timeline" id="newsfeed">
+    <section class="container-fluid" id="newsFeet">
+<!-- inicio de la barra de navegación -->
+      <section class="row">
+        <section class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00afac;">
+            <img src="../assets/images/pluma4.png" class="rounded-circle img-fluid" alt="">
+            <a class="navbar-brand" href="tarjetas.html">Home</a>
+            <span><img class="user-photo" src="" alt=""> <a class="navbar-brand user-name" href="profile-view.html">Profile</a></span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="#">Log out</a></li>
+              </ul>
+            </div>
+          </nav>
+        </section>
+      </section>
+    </section>
+<!-- fin de la barra de navegación -->
+
+    <section class="container">
+      <section class="row" id="user-information">
+        <section class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <img id="profilePicture"src="http://dummyimage.com/200x200" class="rounded-circle mx-auto d-block" alt="picture profile">
+          <p class="user-name">Nombre del usuario</p>
+        </section>
+      </section>
+    </section>
+
+    <section class="container">
+      <section class="row" id="friends">
+        <section class="col-sm-2 col-md-2 col-lg-4 col-xl-4">
+          <thead><p class="h2">My Friends</p></thead>
+
+        <table class="table table-responsive">
+            <tr>
+              <th scope="col"><img class="friendProfile" src="https://placeimg.com/102/102/people" alt="friend picture"></th>
+              <th scope="col"><img class="friendProfile" src="http://placekitten.com/102/102" alt="friend picture"></th>
+              <th scope="col"><img class="friendProfile" src="http://lorempixel.com/output/people-q-c-102-102-1.jpg" alt="friend picture"></th>
+            </tr>
+
+          <tbody>
+            <tr scope="row">
+              <td><img class="friendProfile" src="http://lorempixel.com/output/fashion-q-c-102-102-8.jpg" alt="friend picture"></td>
+              <td><img class="friendProfile" src="http://lorempixel.com/output/sports-q-c-102-102-5.jpg" alt="friend picture"></td>
+              <td><img class="friendProfile" src="http://lorempixel.com/output/sports-q-c-102-102-3.jpg" alt="friend picture"></td>
+            </tr>
+
+            <tr scope="row">
+              <td><img class="friendProfile" src="http://placekitten.com/102/102" alt="friend picture"></td>
+              <td><img class="friendProfile" src="https://placeimg.com/102/102/any" alt="friend picture"></td>
+              <td><img class="friendProfile" src="https://placeimg.com/102/102/people?t=<1517377438855></1517377438855>" alt="friend picture"></td>
+            </tr>
+
+          </tbody>
+        </table>
+        </section>
+
+        <section class="col-sm-10 col-md-10 col-lg-8 col-xl-8">
+<!-- sección para ingresar nueva histria -->
+          <form id="wall-new-history">
+             <div class="form-group">
+               <label class="font-weight-bold h4">Publication</label>
+               <textarea class="form-control new-text" rows="6" placeholder="What is your inspiration?"></textarea>
+             </div>
+             <div class="form-group">
+               <input type="file" class="form-control-file file-history" id="file-history">
+               <button type="submit" class="btn btn-primary mb-2 text-right button-publish" id="post" disabled>Publish</button>
+             </div>
+           </form>
+<!-- termina sección para ingresar nueva histria -->
+
+<!-- sección de newsfeed -->
+           <div id="wall-history">
+             <div class="card new-post">
+               <img class="card-img-top img-fluid photo-history" src="https://www.enlacejudio.com/wp-content/uploads/2017/06/boda-ramo-750x422.jpg" alt="Card image">
+               <div class="card-body">
+                 <h5 class="card-title">User name</h5>
+                 <p class="card-text">- Estúpida boda - suspiro en voz baja.
+
+- Lena, por favor - pide mi madre -. Has esto hoy, solo por Holly. Te lo pido, no hagas nada extraño hoy, ¿si?
+
+- Si, eso es lo que soy, la extraña de la familia - digo, y camino para que deje de toquetear el vestido.
+
+- Lena... - dice en tono reprobatorio.
+
+- Vale. Intentaré ser no tan mala por Holly - asiento exasperada -. Deja en paz el tonto vestido, mamá, ya no puede estar mejor.
+...</p>
+                 <a href="#" class="btn btn-primary">Save as favorite</a>
+               </div>
+            </div>
+           </div>
+<!-- fin de sección de newsfeed -->
+        </section>
+      </section>
+    </section>
+
+
+
+  <!-- sección con scripts -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-messaging.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+  </body>
+</html>
