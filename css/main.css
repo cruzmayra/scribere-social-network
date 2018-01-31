@@ -125,6 +125,7 @@ body {
 
 .card {
   border: 1px solid #44FFD2;
+  margin: 5% auto;
 }
 
 #profile > section > section {

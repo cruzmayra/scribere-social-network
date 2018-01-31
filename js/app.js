@@ -41,6 +41,8 @@ function authentication(provider){
 function loadNewsfeedPage() {
   paintDataUser();
   $('.nav-link').click(logOut);
+  $('.new-text').keyup(validateHistory);
+  $('.button-publish').click(paintHistoryInHtml)
 }
 
 function paintDataUser() {
@@ -49,6 +51,78 @@ function paintDataUser() {
   $('.timeline .user-name').text(userName);
   $('.timeline .user-photo').attr('src',userPhoto);
 }
+
+function validateHistory(){
+  if($(this).val().trim().length > 0) {
+    $('.button-publish').removeAttr("disabled");
+  } else {
+    $('.button-publish').attr("disabled" , true);
+  }
+}
+
+function paintHistoryInHtml(e) {
+  e.preventDefault();
+  //
+  //   if($imagenUpload.files && $imagenUpload.files[0]) {
+  //     console.log($imagenUpload);
+  //
+  //     var variableX = new FileReader();
+  //
+  //     console.log(variableX);
+  //   }
+
+  var $historyInput = $('.new-text').val();
+
+  var $cardHistory = $('<div />', {'class' : 'card'});
+  var $cardImagen = $('<img />', {'class' : 'card-img-top photo-history','src': ' ', 'alt' : 'Card image'});
+  var $cardBody = $('<div />', {'class' : 'card-body'});
+  var $cardTittle = $('<h5 />', {'class' : 'card-title'});
+  var $cardText = $('<p />', {'class' : 'card-text'});
+  var $savePin = $('<a />', {'class' : 'btn btn-primary'});
+
+  $cardTittle.text(localStorage.getItem('userName'));
+  $cardText.text($historyInput);
+  $savePin.text('Save as favorite');
+
+  $cardBody.append($cardTittle);
+  $cardBody.append($cardText);
+  $cardBody.append($savePin);
+
+  $cardHistory.append($cardImagen);
+  $cardHistory.append($cardBody);
+
+  var $imagenUpload = $('#file-history')[0].files[0];
+  console.log($imagenUpload);
+  var reader  = new FileReader();
+
+  reader.onloadend = function () {
+    $cardImagen.src = reader.result;
+  }
+
+  if($imagenUpload) {
+    reader.readAsDataURL($imagenUpload);
+  } else {
+    $cardImagen.src = "";
+  }
+
+  $('#timeline-history').append($cardHistory);
+
+  $('.new-text').val(" ");
+  $('.file-history').next().val(" ");
+}
+
+//
+// $(document).on('change','.file-history',function(){
+//   // e.preventDefault();
+//   if(this.files && this.files[0]){
+//     /* Creamos la Imagen*/
+// 		var imagenHistory = $('.photo-history');
+//     /* Asignamos el atributo source , haciendo uso del método createObjectURL*/
+// 		imagenHistory.attr('src', URL.createObjectURL(this.files[0]));
+//     /  * Añadimos al Div*/
+// 	  console.log(imagenHistory);
+// 	}
+// });
 
 function logOut(e) {
   firebase.auth().signOut().then(function() {
