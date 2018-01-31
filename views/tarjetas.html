@@ -16,7 +16,7 @@
           <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #00afac;">
             <img src="../assets/images/pluma4.png" class="rounded-circle img-fluid" alt="">
             <a class="navbar-brand" href="#">Home</a>
-            <span><img class="user-photo" src="" alt=""> <a class="navbar-brand user-name" href="#">Profile</a></span>
+            <span><img class="user-photo" src="" alt=""> <a class="navbar-brand user-name" href="profile.html">Profile</a></span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -124,11 +124,11 @@
           <form id="new-history">
              <div class="form-group">
                <label class="font-weight-bold h4">Publication</label>
-               <textarea class="form-control" rows="6" placeholder="What is your inspiration?"></textarea>
+               <textarea class="form-control new-text" rows="6" placeholder="What is your inspiration?"></textarea>
              </div>
              <div class="form-group">
-               <input type="file" class="form-control-file">
-               <button type="submit" class="btn btn-primary mb-2 text-right" id="post">Publish</button>
+               <input type="file" class="form-control-file file-history" id="file-history">
+               <button type="submit" class="btn btn-primary mb-2 text-right button-publish" id="post" disabled>Publish</button>
              </div>
            </form>
 <!-- termina sección para ingresar nueva histria -->
@@ -136,11 +136,11 @@
 <!-- sección de newsfeed -->
            <div id="timeline-history">
              <div class="card">
-               <img class="card-img-top" src="http://dummyimage.com/400x300" alt="Card image">
+               <img class="card-img-top photo-history" src="http://dummyimage.com/400x300" alt="Card image">
                <div class="card-body">
-               <h5 class="card-title">User name</h5>
-               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               <a href="#" class="btn btn-primary">Save as favorite</a>
+                 <h5 class="card-title">User name</h5>
+                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                 <a href="#" class="btn btn-primary">Save as favorite</a>
                </div>
             </div>
            </div>
