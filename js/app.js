@@ -98,6 +98,7 @@ function paintHistoryInHtml(e) {
   }
 
   $('#timeline-history').prepend($cardHistory);
+  $('#wall-history"').prepend($cardHistory);
   $('.new-text').val(" ");
   $('.file-history').next().val(" ");
 }
