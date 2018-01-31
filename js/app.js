@@ -74,7 +74,7 @@ function paintHistoryInHtml(e) {
   var $historyInput = $('.new-text').val();
 
   var $cardHistory = $('<div />', {'class' : 'card'});
-  var $cardImagen = $('<img />', {'class' : 'card-img-top photo-history','src': ' ', 'alt' : 'Card image'});
+  var $cardImagen = $('<img />', {'class' : 'card-img-top photo-history', 'alt' : 'Card image'});
   var $cardBody = $('<div />', {'class' : 'card-body'});
   var $cardTittle = $('<h5 />', {'class' : 'card-title'});
   var $cardText = $('<p />', {'class' : 'card-text'});
@@ -96,13 +96,13 @@ function paintHistoryInHtml(e) {
   var reader  = new FileReader();
 
   reader.onloadend = function () {
-    $cardImagen.src = reader.result;
+    $cardImagen.attr('src',reader.result);
   }
 
   if($imagenUpload) {
     reader.readAsDataURL($imagenUpload);
   } else {
-    $cardImagen.src = "";
+    $cardImagen.attr('src'," ");
   }
 
   $('#timeline-history').append($cardHistory);
