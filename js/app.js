@@ -24,9 +24,11 @@ function authentication(provider){
     var token = result.credential.accessToken;
     var user = result.user;
     console.log(result);
-    localStorage.setItem('userName',user.displayName);
-    localStorage.setItem('userPhoto', user.photoURL);
+    // localStorage.setItem('userName',user.displayName);
+    // localStorage.setItem('userPhoto', user.photoURL);
     window.location.href = 'views/tarjetas.html';
+    saveDataUser(user);
+
 
   }).catch(function(error) {
     var errorCode = error.code;
@@ -36,8 +38,20 @@ function authentication(provider){
   });
 }
 
-// función central para la vista de newsfeed
+// función para almacenar al usuario en la base de datos
+function saveDataUser(user) {
+  var scribereUser = {
+    uid: user.uid,
+    name : user.displayName,
+    email : user.email,
+    photo: user.photoURL
+  }
+  // console.log(scribereUser);
+  firebase.database().ref('scribere-user/' + user.uid)
+  .set(scribereUser);
+}
 
+// función central para la vista de newsfeed
 function loadNewsfeedPage() {
   paintDataUser();
   $('.nav-link').click(logOut);
