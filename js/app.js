@@ -1,13 +1,14 @@
-  var config = {
-    apiKey: "AIzaSyC_jGGRvWSg_g2OjYiN-nt48caXdRHiS-M",
-    authDomain: "scribere-1dc4b.firebaseapp.com",
-    databaseURL: "https://scribere-1dc4b.firebaseio.com",
-    projectId: "scribere-1dc4b",
-    storageBucket: "",
-    messagingSenderId: "336969414618"
-  };
+var config = {
+  apiKey: "AIzaSyC_jGGRvWSg_g2OjYiN-nt48caXdRHiS-M",
+  authDomain: "scribere-1dc4b.firebaseapp.com",
+  databaseURL: "https://scribere-1dc4b.firebaseio.com/",
+  projectId: "scribere-1dc4b",
+  storageBucket: "",
+  messagingSenderId: "336969414618"
+};
 
 firebase.initializeApp(config);
+var database = firebase.database();
 
 // función central para la vista de login
 function loadLoginPage(){
@@ -23,13 +24,9 @@ function authentication(provider){
   firebase.auth().signInWithPopup(provider).then(function(result) {
     var token = result.credential.accessToken;
     var user = result.user;
-    console.log(result);
-    // localStorage.setItem('userName',user.displayName);
-    // localStorage.setItem('userPhoto', user.photoURL);
+    console.log(user);
     window.location.href = 'views/tarjetas.html';
     saveDataUser(user);
-
-
   }).catch(function(error) {
     var errorCode = error.code;
     var errorMessage = error.message;
@@ -46,25 +43,24 @@ function saveDataUser(user) {
     email : user.email,
     photo: user.photoURL
   }
-  // console.log(scribereUser);
   firebase.database().ref('scribere-user/' + user.uid)
   .set(scribereUser);
 }
 
 // función central para la vista de newsfeed
 function loadNewsfeedPage() {
-  paintDataUser();
+  // paintDataUser();
   $('.nav-link').click(logOut);
   $('.new-text').keyup(validateHistory);
   $('.button-publish').click(paintHistoryInHtml)
 }
 
-function paintDataUser() {
-  var userName = localStorage.getItem('userName');
-  var userPhoto = localStorage.getItem('userPhoto');
-  $('.timeline .user-name').text(userName);
-  $('.timeline .user-photo').attr('src',userPhoto);
-}
+// function paintDataUser() {
+//   var userName = localStorage.getItem('userName');
+//   var userPhoto = localStorage.getItem('userPhoto');
+//   $('.timeline .user-name').text(userName);
+//   $('.timeline .user-photo').attr('src',userPhoto);
+// }
 
 function validateHistory(){
   if($(this).val().trim().length > 0) {
@@ -117,12 +113,14 @@ function paintHistoryInHtml(e) {
   $('.file-history').next().val(" ");
 }
 
-function logOut(e) {
-  firebase.auth().signOut().then(function() {
+function logOut() {
+  firebase.auth().signOut()
+
+  .then(function() {
     // return true;
     console.log('cerrado');
     //window.location.href = "index.html";
-  }).catch(function(e) {
+  }, function(error) {
     console.log(error);
     // return false
   });
