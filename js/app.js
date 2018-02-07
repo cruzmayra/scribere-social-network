@@ -56,8 +56,8 @@ function loadNewsfeedPage() {
   // paintDataUser();
   $('.nav-link').click(logOut);
   $('.new-text').keyup(validateHistory);
-  writeNewPost();
-  $('.button-publish').click(paintHistoryInHtml)
+  //$('.button-publish').click(paintHistoryInHtml);
+  $('.button-publish').click(writeNewPost);
 }
 
 // function paintDataUser() {
@@ -79,23 +79,23 @@ function validateHistory(){
 function writeNewPost(user) {
   // A post entry.
   var postData = {
-    author: user.displayName,
-    uid: user.uid,
+    author: user.displayName, //
+    uid: user.uid, //
     body: $('#new-history .new-text').val(),
     title: $('#new-history .tittle-text').val(),
     starCount: 0,
-    historyPic: $('#new-history.file-history').next().val()
+    historyPic: $('#file-history')[0].files[0]
   };
 
   // Get a key for a new Post.
-  //var newPostKey = firebase.database().ref().child('posts-stories').push().key;
+  firebase.database().ref('posts-stories').set(postData);
 
   // Write the new post's data simultaneously in the posts list and the user's post list.
   // var updates = {};
   // updates['/posts/' + newPostKey] = postData;
   // updates['/user-posts/' + uid + '/' + newPostKey] = postData;
-  //
-  // return firebase.database().ref().update(updates);
+
+  //return firebase.database().ref().update(updates);
 }
 
 
