@@ -2,6 +2,8 @@
 
 Red social para aquellos que quieren dejar salir al escritor que todos llevamos dentro.
 
+![Scribere Home](https://user-images.githubusercontent.com/32860789/38182972-9beb4386-3602-11e8-957d-15159238c906.png)
+
 #### Objetivos
 Proveer el espacio para que el usuario afín al mundo literario pueda compartir lo que escribe, dentro de una comunidad de personas con ese mismo interés; a la par de crear una comunidad sólida de entusiastas de la literatura, con muchos usuarios a nivel global, que generen un revenue mediante una suscripción "premium" en la que se eliminan los anuncios y se puede publicar de forma anónima entre otras ventajas.
 

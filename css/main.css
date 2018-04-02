@@ -94,6 +94,8 @@ body {
 
 #new-history > div:nth-child(1) > textarea,
 #wall-new-history > div:nth-child(1) > textarea,
+#new-history > div:nth-child(1) > input,
+#wall-new-history > div:nth-child(1) > input,
 .friendProfile {
   border: 1px solid #44FFD2;
 }
