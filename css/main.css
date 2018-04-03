@@ -66,28 +66,37 @@ body {
   width: 8%;
 }
 
-#quote-newsfeed {
+#quote-newsfeed,
+#user-information > section {
   margin: 3% 0%;
   text-align: center;
 }
 
-#new-history > div:nth-child(1) > label {
+#new-history > div:nth-child(1) > label,
+#wall-new-history > div:nth-child(1) > label,
+#friends > section.col-sm-2.col-md-2.col-lg-4.col-xl-4 > p {
   color: #DC0026;
 }
 
-#new-history > div:nth-child(2) > button {
+#new-history > div:nth-child(2) > button,
+#post {
   background-color: #dc0026;
   border: 1px solid #dc0026;
   color: #FFF2E4;
   margin-left: 75%;
 }
 
-#new-history > div:nth-child(2) > input {
+#new-history > div:nth-child(2) > input,
+#file-history {
   color: #00AFAC;
   font-size: 0.8em;
 }
 
-#new-history > div:nth-child(1) > textarea {
+#new-history > div:nth-child(1) > textarea,
+#wall-new-history > div:nth-child(1) > textarea,
+#new-history > div:nth-child(1) > input,
+#wall-new-history > div:nth-child(1) > input,
+.friendProfile {
   border: 1px solid #44FFD2;
 }
 
@@ -122,13 +131,12 @@ body {
     border-color: #dc0026;
 }
 
-
-.card {
+.new-post {
   border: 1px solid #44FFD2;
+  margin: 5% auto;
 }
-
+/*
 #profile > section > section {
-
   padding: 0;
 }
 
@@ -185,7 +193,7 @@ body {
   /* color: #DC0026; */
 }
 
-.table-responsive{
+/* .table-responsive{
   padding: 0;
   margin:0;
   position: relative;
@@ -199,4 +207,4 @@ body {
   position: relative;
   display: inline-block;
   justify-content: flex-end;
-}
+} */
