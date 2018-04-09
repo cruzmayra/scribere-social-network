@@ -28,3 +28,6 @@ Para este proyecto utilizamos múltiples herramientas para investigar y empatiza
 Posteriormente ideamos una forma de ofrecer a los usuarios lo que estan buscando y con otra seríe de recursos materiales y humanos, convertimos esas ideas en esquemas de baja fidelidad -en un principio- y poco a poco fuimos incrementando la complejidad de los mismos para hacerlos más claros y visuales.
 
 Ya con la definición de como tendría que ser la plataforma, proseguimos a probar esas vistas que diseñamos con algunas usuarias obteniendo en su mayoría comentarios positivos lo que nos impulsó para llevar a producción un primer prototipo con al menos un login, 3 vistas (login, home o newsfeet y muro o perfil) y en la parte de funcionalidades nuestro enfoque para esta primera etapa del desarrollo, es lograr postear texto escrito en la plataforma por medio de un imput, así como la carga de fotografías para publicarlas y que ello se muestre en la sección correspondiente en la pantalla.
+
+## Desarrollado para
+Laboratoria.
