@@ -4,6 +4,8 @@ Red social para aquellos que quieren dejar salir al escritor que todos llevamos 
 
 ![Scribere Home](https://user-images.githubusercontent.com/32860789/38182972-9beb4386-3602-11e8-957d-15159238c906.png)
 
+## Desarrollado para Laboratoria
+
 #### Tecnologías
 * Boostrap 4
 * jQuery
