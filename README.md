@@ -7,7 +7,7 @@ Red social para aquellos que quieren dejar salir al escritor que todos llevamos 
 #### Tecnologías
 * Boostrap 4
 * jQuery
-* Java Script
+* JavaScript
 * Firebase login with Google +
 
 
